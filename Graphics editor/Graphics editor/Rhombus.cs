@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Graphics_editor
 {
-    class Rhombus : Square
+    public class Rhombus : Square
     {
         public override void Draw(Graphics element)
         {

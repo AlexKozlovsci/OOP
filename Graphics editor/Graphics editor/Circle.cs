@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Graphics_editor
 {
-    class Circle : Shape
+    public class Circle : Shape
     {
         public override void Draw(Graphics element)
         {

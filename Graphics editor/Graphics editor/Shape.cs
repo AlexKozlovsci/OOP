@@ -7,16 +7,11 @@ using System.Drawing;
 
 namespace Graphics_editor
 {
-    class Shape
+    public abstract class Shape
     {
         public int StartPoint;
         public string Background;
         public string BorderColor;
-
-        public virtual void Draw(Graphics element)
-        {
-           
-        }
-
+        public abstract void Draw(Graphics element);
     }
 }

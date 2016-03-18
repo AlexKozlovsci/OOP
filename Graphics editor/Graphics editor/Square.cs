@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Graphics_editor
 {
-    class Square : Shape
+    public class Square : Shape
     {
         public override void Draw(Graphics element)
         {

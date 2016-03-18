@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Graphics_editor
 {
-    class Polygon : Triangle
+    public class Polygon : Triangle
     {
 
         public override void Draw(Graphics element)
