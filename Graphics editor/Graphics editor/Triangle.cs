@@ -11,17 +11,17 @@ namespace Graphics_editor
     {
         public override void Draw(Graphics element)
         {
-            Point point1 = new Point(300, 70);
-            Point point2 = new Point(350, 20);
-            Point point3 = new Point(400, 70);
-
-            Point[] curvePoints = 
+            this.shapeCorner = 3;
+            int i = 0;
+            Point[] shapePoints = new Point[3];
+            foreach (Point onePoint in base.points)
             {
-                point1, point2, point3
-            };
+                shapePoints[i] = new Point(onePoint.X, onePoint.Y);
+                i++;
+            }
 
-            Pen pen = new Pen(Color.Tomato, 2);
-            element.DrawPolygon(pen, curvePoints);
+            Pen pen = new Pen(base.currColor, 2);
+            element.DrawPolygon(pen, shapePoints);
             pen.Dispose();
         }
 

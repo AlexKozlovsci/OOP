@@ -7,15 +7,15 @@ using System.Drawing;
 
 namespace Graphics_editor
 {
-    public class Ellipse : Circle
+    public class Line : Square
     {
         public override void Draw(Graphics element)
         {
             this.shapeCorner = 2;
+            
             Pen pen = new Pen(base.currColor, 2);
-            element.DrawEllipse(pen, base.points[0].X, base.points[0].Y, base.points[1].X - base.points[0].X, base.points[1].Y - base.points[0].Y);
+            element.DrawLine(pen, base.points[0].X, base.points[0].Y, base.points[1].X, base.points[1].Y);
             pen.Dispose();
         }
-
     }
 }

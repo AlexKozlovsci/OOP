@@ -7,11 +7,11 @@ using System.Drawing;
 
 namespace Graphics_editor
 {
-    public abstract class Shape
+    class PreSave
     {
+        public string shape;
         public Color currColor;
         public int shapeCorner;
         public List<Point> points = new List<Point>();
-        public abstract void Draw(Graphics element);
     }
 }

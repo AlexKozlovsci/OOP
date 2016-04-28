@@ -9,21 +9,19 @@ namespace Graphics_editor
 {
     public class Polygon : Triangle
     {
-
         public override void Draw(Graphics element)
         {
-            Point point1 = new Point(50, 50);
-            Point point2 = new Point(100, 20);
-            Point point3 = new Point(150, 50);
-            Point point4 = new Point(130, 100);
-            Point point5 = new Point(70, 100);
-            Point[] curvePoints = 
+            this.shapeCorner = 5;
+            int i = 0;
+            Point[] shapePoints = new Point[5];
+            foreach (Point onePoint in base.points)
             {
-                point1, point2, point3, point4, point5
-            };
+                shapePoints[i] = new Point(onePoint.X, onePoint.Y);
+                i++;
+            }
 
-            Pen pen = new Pen(Color.Green, 2);
-            element.DrawPolygon(pen, curvePoints);
+            Pen pen = new Pen(base.currColor, 2);
+            element.DrawPolygon(pen, shapePoints);
             pen.Dispose();
         }
     }
